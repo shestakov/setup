@@ -14,5 +14,16 @@ Windows can also be safely reinstalled, given the original Windows' EFI partitio
 7. `VBoxManage setextradata "Windows" "CustomVideoMode1" "1920x1080x24"`
 8. `VBoxManage setextradata "Windows" "CustomVideoMode2" "2560x1440x24"`
 
-## Setting up MSI GF63 drivers:
+## Setting up MSI GF63 drivers on Windows:
 1. For Intel WiFi driver on Win10 `Win64\Installer\setup.xml` and `Win64\Installer\wirelesssetup.exe` must be moved to `Win64\Installer\extensions` and started there.
+2. Call to enable BitLoker without TPM, if needed: `Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\FVE" -Name "EnableBDEWithNoTPM" -Value 1 -Type DWord`
+
+## Setting up Intel Wifi on Linux
+1. Must switch to the Ubuntu's Hardware Enablement kernel as of Mint 22.1 in June 2025
+
+## Software to setup on Linux
+1. Double Commander (`sudo apt install doublecmd-gtk`)
+2. ffmpeg (`sudo apt install ffmpeg`)
+3. docker (https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04)
+4. ansible ()
+5. PostgreSQL ()

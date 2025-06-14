@@ -26,7 +26,9 @@ Windows can also be safely reinstalled, given the original Windows' EFI partitio
 
 ## Setting up MSI GF63 drivers on Windows:
 1. For Intel WiFi driver on Win10 `Win64\Installer\setup.xml` and `Win64\Installer\wirelesssetup.exe` must be moved to `Win64\Installer\extensions` and started there.
-2. Call to enable BitLoker without TPM, if needed: `Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\FVE" -Name "EnableBDEWithNoTPM" -Value 1 -Type DWord`
+2. Call to enable BitLoker without TPM, if needed:
+  * `New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft" -Name "FVE" -Force | Out-Null`
+  * `Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\FVE" -Name "EnableBDEWithNoTPM" -Value 1 -Type DWord` 
 
 ## Setting up Intel Wifi on Linux
 1. Must switch to the Ubuntu's Hardware Enablement kernel as of Mint 22.1 in June 2025

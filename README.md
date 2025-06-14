@@ -34,8 +34,8 @@ Windows can also be safely reinstalled, given the original Windows' EFI partitio
 ## Software to setup on Linux
 1. Double Commander (`sudo apt install doublecmd-gtk`)
 2. ffmpeg (`sudo apt install ffmpeg`)
-3. docker (https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04)
-4. ansible ()
+3. Docker from PPA, not default repo: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04
+4. Ansible, better with modern Python
 5. PostgreSQL (https://www.postgresql.org/download/linux/ubuntu/)
 6. `vscode` (https://code.visualstudio.com/Download)
 7. dotnet:

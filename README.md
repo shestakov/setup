@@ -43,5 +43,9 @@ Windows can also be safely reinstalled, given the original Windows' EFI partitio
    * `echo 'DOTNET_CLI_TELEMETRY_OPTOUT="true"' | sudo tee -a /etc/environment && source /etc/environment && echo "$DOTNET_CLI_TELEMETRY_OPTOUT"`
 9. Rider (https://www.jetbrains.com/help/rider/Installation_guide.html#standalone_linux)
 10. Node Version Manager (https://raw.githubusercontent.com/nvm-sh/nvm/refs/tags/v0.40.3/install.sh)
-11. Xray (https://github.com/XTLS/Xray-install)
-12. Wireguard
+11. Xray
+  * Install: https://github.com/XTLS/Xray-install
+  * Put `config.json` to `/usr/local/etc/xray`
+  * Enable: `sudo systemctl enable xray`
+  * Refer to: https://xtls.github.io/en/document/config.html
+13. Wireguard

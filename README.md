@@ -36,7 +36,9 @@ Windows can also be safely reinstalled, given the original Windows' EFI partitio
 2. ffmpeg (`sudo apt install ffmpeg`)
 3. docker (https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04)
 4. ansible ()
-5. PostgreSQL ()
-6. `vscode`
-7. dotnet
-8. Rider
+5. PostgreSQL (https://www.postgresql.org/download/linux/ubuntu/)
+6. `vscode` (https://code.visualstudio.com/Download)
+7. dotnet:
+   * `sudo apt-get update && sudo apt-get install -y dotnet-sdk-8.0`
+   * `echo 'DOTNET_CLI_TELEMETRY_OPTOUT="true"' | sudo tee -a /etc/environment && source /etc/environment && echo "DOTNET_CLI_TELEMETRY_OPTOUT"`
+9. Rider (https://www.jetbrains.com/help/rider/Installation_guide.html#standalone_linux)

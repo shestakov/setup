@@ -14,6 +14,16 @@ Windows can also be safely reinstalled, given the original Windows' EFI partitio
 7. `VBoxManage setextradata "Windows" "CustomVideoMode1" "1920x1080x24"`
 8. `VBoxManage setextradata "Windows" "CustomVideoMode2" "2560x1440x24"`
 
+## Installing and signing NVIDIA drirvers
+1. Secure Boot should be enabled;
+2. Check if the MOK is enrolled: `mokutil --list-enrolled`
+3. Import the certificate to enroll:`sudo mokutil --import /var/lib/shim-signed/mok/MOK.der`
+4. `reboot` and enroll the certificate, the password has been set during the Mint 22.1 installation
+5. Sign the driver: `sudo /usr/src/linux-headers-$(uname -r)/scripts/sign-file sha256 /var/lib/shim-signed/mok/MOK.priv /var/lib/shim-signed/mok/MOK.der $(modinfo -n nvidia)`
+6. `reboot` again
+7. Finall, `sudo modprobe nvidia`
+8. Test: `nvidia-smi`
+
 ## Setting up MSI GF63 drivers on Windows:
 1. For Intel WiFi driver on Win10 `Win64\Installer\setup.xml` and `Win64\Installer\wirelesssetup.exe` must be moved to `Win64\Installer\extensions` and started there.
 2. Call to enable BitLoker without TPM, if needed: `Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\FVE" -Name "EnableBDEWithNoTPM" -Value 1 -Type DWord`

@@ -40,5 +40,5 @@ Windows can also be safely reinstalled, given the original Windows' EFI partitio
 6. `vscode` (https://code.visualstudio.com/Download)
 7. dotnet:
    * `sudo apt-get update && sudo apt-get install -y dotnet-sdk-8.0`
-   * `echo 'DOTNET_CLI_TELEMETRY_OPTOUT="true"' | sudo tee -a /etc/environment && source /etc/environment && echo "DOTNET_CLI_TELEMETRY_OPTOUT"`
+   * `echo 'DOTNET_CLI_TELEMETRY_OPTOUT="true"' | sudo tee -a /etc/environment && source /etc/environment && echo "$DOTNET_CLI_TELEMETRY_OPTOUT"`
 9. Rider (https://www.jetbrains.com/help/rider/Installation_guide.html#standalone_linux)

@@ -45,7 +45,7 @@ Windows can also be safely reinstalled, given the original Windows' EFI partitio
 10. Node Version Manager (https://github.com/nvm-sh/nvm):
   * Install: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash`
   * Re-start the terminal
-  * Do `nvm install 14.7.0` or whatever version is needed
+  * Do `nvm install 20.2.0` or whatever version is needed
 12. Xray
   * Install: https://github.com/XTLS/Xray-install
   * Put `config.json` to `/usr/local/etc/xray`

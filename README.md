@@ -42,8 +42,11 @@ Windows can also be safely reinstalled, given the original Windows' EFI partitio
    * `sudo apt-get update && sudo apt-get install -y dotnet-sdk-8.0`
    * `echo 'DOTNET_CLI_TELEMETRY_OPTOUT="true"' | sudo tee -a /etc/environment && source /etc/environment && echo "$DOTNET_CLI_TELEMETRY_OPTOUT"`
 9. Rider (https://www.jetbrains.com/help/rider/Installation_guide.html#standalone_linux)
-10. Node Version Manager (https://raw.githubusercontent.com/nvm-sh/nvm/refs/tags/v0.40.3/install.sh)
-11. Xray
+10. Node Version Manager (https://github.com/nvm-sh/nvm):
+  * Install: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash`
+  * Re-start the terminal
+  * Do `nvm install 14.7.0` or whatever version is needed
+12. Xray
   * Install: https://github.com/XTLS/Xray-install
   * Put `config.json` to `/usr/local/etc/xray`
   * Enable: `sudo systemctl enable xray`

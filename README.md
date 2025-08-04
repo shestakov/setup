@@ -31,6 +31,10 @@ Windows can also be safely reinstalled, given the original Windows' EFI partitio
 ## Setting up Intel Wifi on Linux
 1. Must switch to the Ubuntu's Hardware Enablement kernel as of Mint 22.1 in June 2025
 
+## Setting up HP printers/MFP on Linux:
+1. `sudo apt install hplip`
+2. Run `pkexec /usr/bin/hp-plugin` to install a plug-in for the actual device.
+
 ## Software to setup on Linux
 1. Double Commander (`sudo apt install doublecmd-gtk`)
 2. ffmpeg (`sudo apt install ffmpeg`)
